@@ -1,0 +1,23 @@
+{
+  "name": "not-by-plane",
+  "description": "Week 9 Group Project: Not By Plane App =================",
+  "main": "index.js",
+  "authors": [
+    "Eleni Skouroupathi <eleni59@hotmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/EleniSkouroupathi/not-by-plane",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6",
+    "angular-typeahead": "~0.3.1"
+  }
+}

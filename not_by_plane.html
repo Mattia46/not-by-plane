@@ -1,0 +1,126 @@
+  <i class='fa fa-plane fa-5x' style='margin-top:50px;'></i>
+		<div id="wrapper" style='float:left; margin-top:50px; margin-left:50px;
+    width: 500px;'>
+      <header style='float:left; margin-bottom: 20px; margin-left:120px; width:500px;'>
+    <!--<center>-->
+				<h1> Plan Your Journey </h1>
+    <!--</center>-->
+			</header>
+			<div class="content">
+				<form>
+					<div class="form-container" style='float:left; margin-left:70px; width:550px;'>
+						<input type="text" placeholder=" From" class="typeahead" sf-typeahead options="exampleOptions" datasets="airportsDataset" ng-model="noPlaneCtrl.selectedAirportFrom"> <br> <br>
+						<input type="text" placeholder=" To" class='typeahead' sf-typeahead options="exampleOptions" datasets="airportsDataset" ng-model="noPlaneCtrl.selectedAirportTo"> <br> <br><br>
+            <div class='inputForm'>
+              <div class='departure'>Departure date:</div>
+			<input ng-model='noPlaneCtrl.startingDate' placeholder='yyyy-MM-dd' type="date"> <br><br>
+			<div class='departure'>Return date:</div>
+			<input  ng-model='noPlaneCtrl.endingDate' placeholder='yyyy-MM-dd' type="date"> <br><br><br>
+
+					<!--<div class="form-container2">-->
+						Travel method (please select atleast one):
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="" ng-model='noPlaneCtrl.planeChecked' checked>Planes</label>
+						</div>
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" value="" ng-model='noPlaneCtrl.trainChecked' checked>Trains</label>
+            </div></div> <br>
+						<div>
+							<button type="button" class="btn btn-default" ng-click='noPlaneCtrl.searchs()'>PLAN MY JOURNEY</button>
+						</div><br>
+				</form>
+          </div> </div> </div>
+			<div style='float:left; margin-top:100px; margin-left:100px; width:670px;'><div>
+				<form id='form'>
+					<table class="table">
+						<tr>
+							<th colspan='4'>OUTWARD - TRAINS</th>
+						</tr> <tr>
+              <th></th><th>Date</th>
+							<th>From</th>
+							<th>To</th>
+							<th>GBP</th>
+							<th>Class</th>
+						</tr>
+						<tr ng-repeat='item in noPlaneCtrl.searchResult.results'
+              ng-show="noPlaneCtrl.isTrainJourney(item.itineraries[0].outbound.flights[0].aircraft)">
+              <td> <button class="btn btn-primary" name="button" ng-click="noPlaneCtrl.showFlight($index)"> More Info </button> </td>
+							<td>{{item.itineraries[0].outbound.flights[0].departs_at}}&nbsp;&nbsp;</td>
+							<td> {{item.itineraries[0].outbound.flights[0].origin.airport}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].destination.airport}}</td>
+							<td> {{item.fare.total_price}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].booking_info.travel_class}}</td>
+						</tr>
+					</table>
+					<table class="table">
+						<tr>
+							<th colspan='4'>OUTWARD - PLANES</th>
+						</tr>
+						<tr>
+							<th></th><th>Date</th>
+							<th>From</th>
+							<th>To</th>
+							<th>GBP</th>
+							<th>Class</th>
+						</tr>
+						<tr ng-repeat='item in noPlaneCtrl.searchResult.results' ng-hide="noPlaneCtrl.isTrainJourney(item.itineraries[0].outbound.flights[0].aircraft)">
+              <td> <button class="btn btn-primary" name="button" ng-click="noPlaneCtrl.showFlight($index)"> More Info </button> </td>
+							<td>{{item.itineraries[0].outbound.flights[0].departs_at}}&nbsp;&nbsp;</td>
+							<td> {{item.itineraries[0].outbound.flights[0].origin.airport}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].destination.airport}}</td>
+							<td> {{item.fare.total_price}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].booking_info.travel_class}}</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div>
+				<form>
+					<table class="table">
+						<tr>
+							<th colspan='4'>INWARD - TRAINS</th>
+						</tr>
+						<tr>
+							<th></th><th>Date</th>
+							<th>From</th>
+							<th>To</th>
+							<th>GBP</th>
+							<th>Class</th>
+						</tr>
+						<tr ng-repeat='item in noPlaneCtrl.searchResult2.results' ng-show="noPlaneCtrl.isTrainJourney(item.itineraries[0].outbound.flights[0].aircraft)">
+              <td> <button class="btn btn-primary" name="button" ng-click="noPlaneCtrl.showFlight($index)"> More Info </button> </td>
+							<td>{{item.itineraries[0].outbound.flights[0].departs_at}}&nbsp;&nbsp;</td>
+							<td>{{item.itineraries[0].outbound.flights[0].origin.airport}}</td>
+							<td>{{item.itineraries[0].outbound.flights[0].destination.airport}}</td>
+							<td>{{item.fare.total_price}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].booking_info.travel_class}}</td>
+						</tr>
+					</table>
+
+					<table class="table">
+						<tr>
+							<th colspan='4'>INWARD - PLANES</th>
+						</tr>
+						<tr>
+							<th></th><th>Date</th>
+							<th>From</th>
+							<th>To</th>
+							<th>GBP</th>
+							<th>Class</th>
+						</tr>
+						<tr ng-repeat='item in noPlaneCtrl.searchResult2.results' ng-hide="noPlaneCtrl.isTrainJourney(item.itineraries[0].outbound.flights[0].aircraft)">
+              <td> <button class="btn btn-primary" name="button" ng-click="noPlaneCtrl.showFlight($index)"> More Info </button> </td>
+							<td>{{item.itineraries[0].outbound.flights[0].departs_at}}&nbsp;&nbsp;</td>
+							<td>{{item.itineraries[0].outbound.flights[0].origin.airport}}</td>
+							<td>{{item.itineraries[0].outbound.flights[0].destination.airport}}</td>
+							<td>{{item.fare.total_price}}</td>
+							<td> {{item.itineraries[0].outbound.flights[0].booking_info.travel_class}}</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+		</div>
+

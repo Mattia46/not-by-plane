@@ -1,0 +1,28 @@
+{
+  "name": "not-by-plane",
+  "version": "1.0.0",
+  "description": "Week 9 Group Project: Not By Plane App =================",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EleniSkouroupathi/not-by-plane.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EleniSkouroupathi/not-by-plane/issues"
+  },
+  "homepage": "https://github.com/EleniSkouroupathi/not-by-plane#readme",
+  "dependencies": {
+    "airport-codes": "^1.0.2",
+    "angular": "^1.4.8",
+    "angular-resource": "^1.4.8",
+    "angular-route": "^1.4.8",
+    "express": "^4.13.3",
+    "node": "0.0.0",
+    "nodemon": "^1.8.1"
+  }
+}

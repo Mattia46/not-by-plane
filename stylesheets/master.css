@@ -1,0 +1,60 @@
+body {
+  background-color: #202020;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.fa {
+  color: gray;
+}
+
+.table {
+  color: white;
+  float: right;
+}
+
+header {
+  font-family: "league-gothic", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1.0em;
+  color: #fff;
+}
+
+.content {
+  min-height: 40vh;
+  padding: 10px;
+  color: black;
+}
+
+#wrapper {
+  max-width: 50vw;
+}
+
+.form-container {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding: 20px 24px 20px 24px;
+  border-bottom: 1px #333 solid;
+  background-color: #E25D33;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  max-width: 30vw;
+  float: left;
+}
+
+.departure {
+  /*padding: 9px;*/
+  /*margin-left: 10px;*/
+  /*margin-top: 10px;*/
+  /*width: 200px;*/
+}
+
+.checkbox {
+margin-left: 9px;
+}
+
+form input {
+  color: black;
+}

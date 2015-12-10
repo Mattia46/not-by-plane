@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app='notplaneapp'>
+
+<head>
+  <script src='airportsNEW.js'></script>
+  <script src='makingjson.js'></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/master.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="app/allAirports.js"></script>
+	<link rel="stylesheet" href="stylesheets/searchbars.css">
+	<script>
+		document.write('<base href="' + document.location + '" />');
+	</script>
+	<script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+	<script src='node_modules/angular/angular.js'></script>
+	<script src='node_modules/angular-route/angular-route.js'></script>
+	<script src='node_modules/angular-resource/angular-resource.js'></script>
+	<script data-require="typeahead.js@*" data-semver="0.10.0" src="http://twitter.github.com/typeahead.js/releases/latest/typeahead.bundle.js"></script>
+	<script data-require="bloodhound.js@*" data-semver="0.10.0" src="http://twitter.github.com/typeahead.js/releases/latest/bloodhound.js"></script>
+	<script src="app/angular-typeahead.js"></script>
+	<script src='app/app.js'></script>
+	<script src='app/token.js'></script>
+	<script src='app/noPlaneController.js'></script>
+	<script src='app/factoryOutbound.js'></script>
+	<script src='app/factoryInbound.js'></script>
+	<script src="app/airports.json"></script>
+  <script src='app/factoryStringDate.js'></script>
+  <script src='app/factoryTLANameLookup.js'></script>
+
+	<title> Not By Plane</title>
+</head>
+
+<body ng-controller='noPlaneController as noPlaneCtrl'>
+  <div ng-view></div>
+</body>
+
+</html>
