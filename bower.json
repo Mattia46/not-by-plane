@@ -1,12 +1,12 @@
 {
   "name": "not-by-plane",
-  "description": "Week 9 Group Project: Not By Plane App =================",
-  "main": "index.js",
+  "description": "",
+  "main": "airportsNEW.js",
   "authors": [
-    "Eleni Skouroupathi <eleni59@hotmail.com>"
+    "Mattia46 <mattia.assogna@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/EleniSkouroupathi/not-by-plane",
+  "homepage": "https://github.com/Mattia46/not-by-plane",
   "moduleType": [],
   "ignore": [
     "**/.*",
@@ -17,7 +17,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.6",
-    "angular-typeahead": "~0.3.1"
+    "angular-typeahead": "~0.3.1",
+    "bootstrap": "~3.3.6"
   }
 }
