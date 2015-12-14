@@ -34,7 +34,7 @@
           </div> </div> </div>
 			<div style='float:left; margin-top:100px; margin-left:100px; width:670px;'><div>
 				<form id='form'>
-					<table class="table">
+					<table class="table" ng-show='noPlaneCtrl.searchResult.results'>
 						<tr>
 							<th colspan='4'>OUTWARD - TRAINS</th>
 						</tr> <tr>
@@ -54,7 +54,7 @@
 							<td> {{item.itineraries[0].outbound.flights[0].booking_info.travel_class}}</td>
 						</tr>
 					</table>
-					<table class="table">
+					<table class="table" ng-show='noPlaneCtrl.searchResult.results'>
 						<tr>
 							<th colspan='4'>OUTWARD - PLANES</th>
 						</tr>
@@ -78,7 +78,7 @@
 			</div>
 			<div>
 				<form>
-					<table class="table">
+					<table class="table" ng-show='noPlaneCtrl.searchResult.results'>
 						<tr>
 							<th colspan='4'>INWARD - TRAINS</th>
 						</tr>
@@ -99,7 +99,7 @@
 						</tr>
 					</table>
 
-					<table class="table">
+					<table class="table" ng-show='noPlaneCtrl.searchResult.results'>
 						<tr>
 							<th colspan='4'>INWARD - PLANES</th>
 						</tr>
