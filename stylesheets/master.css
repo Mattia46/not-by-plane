@@ -52,9 +52,15 @@ header {
 }
 
 .checkbox {
-margin-left: 9px;
+  margin-left: 9px;
 }
+.float-left {
+  float: left;
+  margin-top: 100px;
+  margin-left: 197px;
+  width: 670px;
+    }
 
 form input {
-  color: black;
+      color: black;
 }
